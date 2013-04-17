@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AwwStream</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="css/5grid/init.js?use=mobile,desktop"></script>
+		<script src="js/jquery.formerize-1.1.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/5grid/core.css" />
+			<link rel="stylesheet" href="css/5grid/core-desktop.css" />
+			<link rel="stylesheet" href="css/5grid/core-1200px.css" />
+			<link rel="stylesheet" href="css/5grid/core-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+			<link rel="stylesheet" href="css/noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="index.html" class="icon icon-home"><span>Home</span></a>
+						<a href="#videos" class="icon icon-video active"><span>Videos</span></a>
+						<a href="download.html" class="icon icon-download"><span>Download App</span></a>
+						<a href="http://www.facebook.com/pages/Awwstream-The-Personalized-Stream-of-Awesome-Videos/481748448548569?ref=hl" class="icon icon-facebook" target="_blank"></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">			
+						<!-- Videos -->
+							<article id="videos" class="panel">
+								
+								<div id="player"></div>
+								
+								<script>
+									// This code loads the IFrame Player API code asynchronously.
+									var tag = document.createElement('script');
+
+									tag.src = "https://www.youtube.com/iframe_api";
+									var firstScriptTag = document.getElementsByTagName('script')[0];
+									firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	
+									// Set videoId based on hash anchor link
+									var id = 'KWFfDyupGpQ';
+									if (window.location.hash) {
+										id = window.location.hash.substring(1);
+									}
+									
+									// This function creates an <iframe> (and YouTube player)
+									// after the API code downloads.
+									var player;
+									function onYouTubeIframeAPIReady() {
+										player = new YT.Player('player', {
+											height: '390',
+											width: '640',
+											videoId: id,
+										});
+									}
+								</script>
+								
+								<span class="byline">
+									<p>Stream more <b>Awesome Videos</b> with our <a href="download.html"> Android App</a>.</p>
+								</span>
+							</article>
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="links">
+							<li>&copy; Beautiful Lab</li>
+							<li>Design : tuanh118</li>
+						</ul>
+					</div>
+		
+			</div>
+
+	</body>
+</html>
