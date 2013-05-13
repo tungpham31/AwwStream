@@ -56,31 +56,7 @@
 								
 								<div id="player"></div>
 								
-								<script>
-									// This code loads the IFrame Player API code asynchronously.
-									var tag = document.createElement('script');
-
-									tag.src = "https://www.youtube.com/iframe_api";
-									var firstScriptTag = document.getElementsByTagName('script')[0];
-									firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-	
-									// Set videoId based on hash anchor link
-									var id = 'M7lc1UVf-VE';
-									if (window.location.hash) {
-										id = window.location.hash.substring(1);
-									}					
-									
-									// This function creates an <iframe> (and YouTube player)
-									// after the API code downloads.
-									var player;
-									function onYouTubeIframeAPIReady() {
-										player = new YT.Player('player', {
-											height: '390',
-											width: '640',
-											videoId: id,
-										});
-									}
-								</script>
+								<script src="javascripts/youtube_script.js"></script>
 							</article>
 							
 						<!-- Download --> 

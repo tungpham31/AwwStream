@@ -4,5 +4,6 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+	videoId = req.query["videoId"]; // Get the videoId to display
+	res.render('index', { title: 'Express', videoId : videoId });
 };
