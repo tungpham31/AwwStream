@@ -6,7 +6,7 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // Set videoId based on hash anchor link
-var videoId = 'M7lc1UVf-VE';
+var videoId = 'PzYKsLch4GM';
 if (window.location.hash) {
 	videoId = window.location.hash.substring(1);
 }					
@@ -18,7 +18,6 @@ function onYouTubeIframeAPIReady() {
 	player = new YT.Player('player', {
 		height: '390',
 		width: '640',
-		videoId: 'PzYKsLch4GM',
 		events: {
             'onReady': onPlayerReady
           }
